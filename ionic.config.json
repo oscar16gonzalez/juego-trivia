@@ -1,5 +1,11 @@
 {
-  "name": "juego-trivia",
-  "integrations": {},
-  "type": "angular"
+    "name": "juego-trivia",
+    "integrations": {
+        "cordova": {}
+    },
+    "type": "angular",
+    "proxies": [{
+        "path": "*",
+        "proxyUrl": "http://target-server.com"
+    }]
 }

@@ -1,0 +1,48 @@
+.contenido {
+    --background: none;
+    background-image: url("../../../assets/img/fondo-preguntas.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+    text-align: center;
+    // position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    // transform: translateY(-50%);
+}
+
+#container strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+}
+
+#container a {
+    text-decoration: none;
+}
+
+.font {
+    font-family: font-game !important;
+}
+
+.text-input {
+    margin-top: -15%;
+    z-index: 999;
+    color: black;
+    font-size: -75rem;
+}
+
+.text-btn {
+    color: #ffff;
+    margin-top: -18%
+}

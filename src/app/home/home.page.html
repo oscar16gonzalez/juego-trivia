@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="contenido">
+    <div style="display: block;" id="container">
+        <ion-grid class="color-content">
+            <img style="display: block; margin: auto; height: 43vh; margin-top: 10vh;" src="../../assets/img/logo.svg" alt="">
+            <ion-row class="ion-align-items-center">
+                <ion-col size="12">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+                    <button style="background-color: transparent;">
+                        <img class="title-image" src="../../assets/img/boton-preguntas.svg" width="xxx" height="xxx" />
+                        <ion-input placeholder="User Player" name="username" [(ngModel)]="username" class="text-input"
+                            required>
+                        </ion-input>
+                    </button>
+                </ion-col>
+                <ion-col size="12" class="ion-text-center">
+                    <button style="background-color: transparent;" (click)="consultPlayer()">
+                        <img class="title-image" src="../../assets/img/boton-verde.svg" width="xxx" height="xxx" />
+                        <p style="margin-top: -18%; color: white; font-size: 10px;" class="font text-btn">JUGAR</p>
+                    </button>
+                </ion-col>
+            </ion-row>
+            <img style="display: block; margin-left: 1rem;" src="../../assets/img/logoinferior.png" alt="">
+        </ion-grid>
+    </div>
 </ion-content>

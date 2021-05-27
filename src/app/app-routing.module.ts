@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'season',
+    loadChildren: () => import('./pages/season/season.module').then( m => m.SeasonPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
+  },
 ];
 
 @NgModule({

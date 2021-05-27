@@ -1,0 +1,18 @@
+<ion-content class="contenido">
+    <img style="    margin-left: 70%;
+    margin-top: 18%;" class="title-image" src="../../assets/img/boton-verde.svg" width="xxx" height="xxx" />
+    <div style="    margin-top: -1%;
+    height: 50%;
+    width: 35%;
+    color: grey;
+    margin-left: 62%;
+    background-color: rgb(209, 204, 204);">
+        <ion-grid fixed>
+            <ion-row *ngFor="let response of categoria; let i = index">
+                <ion-col style="font-size: small;" class="font" size="6" (click)="season()">Icono</ion-col>
+                <ion-col style="font-size: small;" size="6" class="font">{{response.name}}</ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+</ion-content>
