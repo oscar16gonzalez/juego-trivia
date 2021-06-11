@@ -1,18 +1,66 @@
 <ion-content class="contenido">
-    <img style="    margin-left: 70%;
-    margin-top: 18%;" class="title-image" src="../../assets/img/boton-verde.svg" width="xxx" height="xxx" />
-    <div style="    margin-top: -1%;
-    height: 50%;
-    width: 35%;
-    color: grey;
-    margin-left: 62%;
-    background-color: rgb(209, 204, 204);">
-        <ion-grid fixed>
-            <ion-row *ngFor="let response of categoria; let i = index">
-                <ion-col style="font-size: small;" class="font" size="6" (click)="season()">Icono</ion-col>
-                <ion-col style="font-size: small;" size="6" class="font">{{response.name}}</ion-col>
-            </ion-row>
-        </ion-grid>
+    <div style="position: absolute; background-color: #007025; height: 2%; width: 100%;"></div>
+    <div style="bottom: 0em; position: absolute; background-color: #007025; height: 2%; width: 100%;"></div>
+    <div style="position: absolute;
+                width: 4rem;
+                margin: 1rem; z-index: 9;">
+        <img style="display: block; margin-left: 1rem;" src="../../assets/img/logo.svg" alt="">
     </div>
 
+    <div style="position: absolute;  top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); width: 100%;">
+        <img src="../../../assets/img/mapa.svg" alt="">
+    </div>
+
+    <div style="position: absolute;
+                width: 10em;
+                bottom: 14em;
+                /* margin-left: 38em; */
+                right: 0;
+                margin-right: 4.5em;
+                z-index: 9">
+        <img class="title-image" src="../../assets/img/boton-verde.svg" width="xxx" height="xxx" />
+    </div>
+    <div style="position: absolute;
+                bottom: 14.8rem;
+                /* margin-left: 40em; */
+                right: 0;
+                margin-right: 6.5em;
+                z-index: 9">
+        <label style="color: white;" class="font" for="">Temporadas</label>
+    </div>
+    <div style="position: absolute; bottom: 0em; right: 0; margin-right: 2em;">
+        <div style="position: relative;
+                    height: 12em;
+                    width: 15em;
+                    bottom: 2.5em;
+                    overflow: auto;
+                    background-color: rgb(225, 227, 241);
+                    filter: alpha(opacity=50);
+                    opacity: 0.5;
+                    margin-left: 3.5em;">
+
+            <div style="margin: .55rem ;">
+                <ion-grid fixed>
+                    <ion-row *ngFor="let response of categoria; let i = index" (click)="season(response.id)">
+                        <!-- <ion-col style="font-size: small;" class="font" size="6" (click)="season()">Icono</ion-col> -->
+                        <ion-icon style="margin-top: 2vh;" src="../../assets/img/pin-rojo.svg"></ion-icon>
+                        <ion-col style="font-size: .75rem; margin-left: 3px; font-weight: 800;" size="7" class="font">
+                            {{response.name}}</ion-col>
+                        <img style="margin-top: 2vh; width: 25%;" src="../../assets/img/categoria.svg" />
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </div>
+    </div>
+
+    <div style="position: absolute;
+                bottom: 1rem;
+                /* margin-left: 40em; */
+                right: 0;
+                margin-right: 2.5em;
+                z-index: 9">
+        <img style="margin-top: 2vh; " src="../../assets/img/progreso.svg" />
+    </div>
 </ion-content>

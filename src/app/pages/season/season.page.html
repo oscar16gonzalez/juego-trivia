@@ -1,37 +1,49 @@
 <ion-content [fullscreen]="true" class="contenido">
 
-    <!-- <div>
-            <img style="display: flex;margin: 2rem;" class="title-image" src="../../assets/img/reloj.svg" width="xxx" height="xxx" />
-            <label class="font" for="">{{questionTime}}</label>
-        </div> -->
-    <!-- <div style="position: absolute;
-                width: 100%;
-                justify-content: center;
-                display: flex; margin-top: 1vh;
-                margin-top: 5vh;">
-        <img style="width: 40%;" class="title-image" src="../../assets/img/marcador.svg" width="xxx" height="xxx" />
-    </div> -->
-    <!-- <div style="width: 100%;
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                margin-top: 8vh;">
-        <p>
-            {{userActive}}
-        </p>
-    </div> -->
-    <div style="width: 100%;
-                position: absolute;
-                margin-top: 6vh;">
-        <div style="    display: flex;
-            justify-content: center;">
-            <img style="width: 50%;" class="title-image" src="../../assets/img/marcador.svg" width="xxx" height="xxx" />
-        </div>
-        <div style="width: 20%; position: absolute; margin-left: 55%; margin-top: -4vh; ">
-            <p style="margin-top: -2.5em; text-align: center; font-size: .60rem; color: white;" class="font">{{userActive}}</p>
+
+    <div style="position: absolute; width: 100%; top: 3%;">
+        <div style="background-color: transparent; display: flex; justify-content: center;">
+            <div style="display: block;" id="container">
+                <img class="title-image" src="../../assets/img/marcador.svg" width="xxx" height="xxx" />
+
+                <ion-row style="width: 30%;
+                margin-top: -3.5em;
+                margin-left: .7em;">
+                    <ion-col style="margin-top: 1.5em;" size="2.2" *ngFor="let item of myArrayCPU">
+                        <ion-icon [src]="item"></ion-icon>
+                    </ion-col>
+                    <label style="font-size: 1.5rem;
+                    color: #ffff;
+                    margin-left: 5.7em;
+                    margin-top: -2.2em" class="font">{{puntajeCPU}}</label>
+                    <label style="font-size: .7rem;
+                    color: #ffff;
+                    margin-left: 2.7em;
+                    margin-top: -4em" class="font">CPU</label>
+                </ion-row>
+
+                <ion-row style="    width: 30%;
+                margin-top: -1.8em;
+                margin-left: 15.5em">
+                    <ion-col size="2.2" *ngFor="let item of myArray">
+                        <ion-icon [src]="item"></ion-icon>
+                    </ion-col>
+                    <label style="    font-size: 1.5rem;
+                    color: #ffff;
+                    margin-left: -6.3em;
+                    margin-top: -1em" class="font">{{puntaje}}</label>
+                    <label style="font-size: .7rem;
+                       color: #ffff;
+                       margin-left: 2.7em;
+                       margin-top: -1.5em" class="font">{{userActive}}</label>
+                </ion-row>
+            </div>
         </div>
     </div>
 
+
+
+    <!-- RELOJ -->
     <div style="min-width: auto; width: 10em;">
         <button style="background-color: transparent;">
             <div style="display: block;" id="container">
@@ -40,16 +52,59 @@
                 <label style="display: flex;
                                margin: 1.2rem;
                                margin-top: -40%;
-                               color: red;
+                               /* color: rgb(39, 171, -56); */
+                               color: cornsilk;
                                font-size: 30px;" class="font" for="">{{questionTime}}</label>
             </div>
         </button>
     </div>
 
-    <!-- IMAGENES DE LOS JUGADORES -->
+    <!-- HOME - VOLUMEN -->
 
-    <div style="width: 100%; position: absolute; display: flex; bottom: 9em; justify-content: center;">
-        <img style="width: 13%;" class="title-image" src="../../assets/img/arquero.svg" width="xxx" height="xxx" />
+    <div style="position: absolute; top: 1%;
+    right: 0;
+    ">
+        <img style="width: 80%;" class="title-image" src="../../assets/img/sonido.svg" width="xxx" height="xxx" />
+    </div>
+    <div style="position: absolute; top: 1%;
+    right: 0;
+    margin-right: 17vh;" (click)="menu()">
+        <img style="width: 80%;" class="title-image" src="../../assets/img/home.svg" width="xxx" height="xxx" />
+
+    </div>
+
+
+
+
+    <!-- IMAGENES DE LOS JUGADORES -->
+    <div style=" display: flex;
+                justify-content: center;
+                align-items: center;">
+
+        <div *ngIf="prueba">
+            <img id="pruebas" style="position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);" [src]="animacion" alt="">
+
+        </div>
+        <div *ngIf="!prueba">
+            <img style="position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);" class="title-image" [src]="animacion" width="xxx" height="xxx" />
+        </div>
+
+        <div>
+            <img style="position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);" class="title-image" [src]="animavionJugador" width="xxx" height="xxx" />
+        </div>
+    </div>
+
+    <!-- 
+    <div *ngIf="prueba" style="position: absolute; margin-top: -100px;">
     </div>
 
     <div style="width: 100%; position: absolute; display: flex; bottom: 2em; justify-content: center; margin-left: 1em;">
@@ -58,8 +113,9 @@
 
     <div style="width: 90%; position: absolute; display: flex; bottom: 1em; justify-content: center;">
         <img style="width: 7%;" class="title-image" src="../../assets/img/jugador.svg" width="xxx" height="xxx" />
-    </div>
+    </div> -->
 
+    <!-- PREGUNTAS -->
     <div style="width: 35%; background-color:white; box-shadow: 2px 2px 5px #999; height: 5em; bottom: 1em;
                 position: absolute;
                 margin-left: 1em;">
@@ -68,15 +124,18 @@
             <img style="margin-left: .2em; margin-top: -2em;" class="title-image" src="../../assets/img/boton-verde.svg" width="xxx" height="xxx" />
         </div>
         <p style="margin-top: -2.5em; text-align: center; font-size: .75rem; color: white;" class="font">RUSIA</p>
-        <p style="height: auto; margin-left: 2em; margin-top: 3em; color: black; font-size: 0.6em; letter-spacing: 0.1em; text-align: center;" class="font" *ngFor="let response of preguntas; let i = index">
-            {{response.text}}
+        <p style="height: auto; margin-left: 2em; margin-top: 3em; color: black; font-size: 0.6em; letter-spacing: 0.1em; text-align: center;" class="font" *ngIf="questionsList.length > 0 && questionsList.length < 6">
+            {{questionsList[questionActual - 1].text}}
         </p>
     </div>
-    <div style="float: right; position: absolute; bottom: 0em; margin-left: 53%; justify-content: center; width: 20em;">
+
+    <!-- RESPUESTAS -->
+    <div style="float: right; position: absolute; bottom: 0em;    right: 0;
+    margin-right: .5em; justify-content: center; width: 20em;">
         <ion-grid>
             <ion-row>
-                <ion-col size="6" *ngFor="let response of respuestas; let i = index">
-                    <button style="background-color: transparent;" (click)="onClick(response)">
+                <ion-col size="6" *ngFor="let response of respuestas">
+                    <button style="background-color: transparent; width: 170px;" (click)="saveQuestion(questionsList[questionActual], response)">
                         <img *ngIf="response.valid; else elseBlock" class="title-image" [src]="this.buton" width="xxx"
                             height="xxx" />
                         <ng-template #elseBlock><img class="title-image" [src]="this.buton" width="xxx" height="xxx" />
@@ -88,64 +147,13 @@
             </ion-row>
         </ion-grid>
     </div>
-
-    <!-- <div>
-        <button style="background-color: transparent;">
-            <div style="display: block;" id="container">
-                <img style="display: flex;margin: 2rem;" class="title-image" src="../../assets/img/reloj.svg"
-                    width="xxx" height="xxx" />
-                <label style="display: flex;
-              margin: 1.2rem;
-              margin-top: -40%;
-              color: red;
-              font-size: 30px;" class="font" for="">{{questionTime}}</label>
-            </div>
-         </button>
-    </div> -->
-
-    <!-- <button style="background-color: transparent; margin-top: 20%; width: 35%;
-    " (click)="onClick()">
-        <img class="title-image" src="../../assets/img/boton-verde.svg" width="xxx" height="xxx" />
-        <p style="margin-top: -9%;
-        color: white;
-        width: 100%;
-        font-size: 10px;" class="font text-btn">RUSIA 2018 </p>
-        <div style="
-    padding: 5px;
-    /* max-width: 94%; */
-    max-height: 20%;
-    margin-left: 0%;
-    background-color: white;
-    color: black;
-    width: 100%;" *ngFor="let response of preguntas; let i = index">
-            <p style="font-size: .8rem">{{response.text}}</p>
-        </div>
-    </button> -->
-    <!-- <div style="margin-top: -36%; margin-left: 0%; width: 100%;">
-        <img style="width: 100%;" class="title-image" src="../../assets/img/arco.svg" width="xxx" height="xxx" />
-    </div> -->
-    <!-- <div style="margin-top: -36%; margin-left: 43%;">
-        <img style="width: 25%;" class="title-image" src="../../assets/img/arquero.svg" width="xxx" height="xxx" />
+    <div style="position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0em">
+        <!-- <label style="font-size: 20px; color: white">{{questionActual}} / {{questionsList.length}}</label> -->
     </div>
-    <div style="margin-top: -5%; margin-left: 40%;">
-        <img class="title-image" src="../../assets/img/jugador.svg" width="xxx" height="xxx" />
-    </div>
-    <div style="margin-top: -10%; margin-left: 50%;">
-        <img style="width: 5%;" class="title-image" src="../../assets/img/balon.svg" width="xxx" height="xxx" />
-    </div>
-    <ion-grid style="margin-top: -10%; width: 50%; margin-left: 50%;">
-        <ion-row>
-            <ion-col size="6" *ngFor="let response of respuestas; let i = index">
-                <button style="background-color: transparent;" (click)="onClick(response)">
-                    <img *ngIf="response.valid; else elseBlock" class="title-image" [src]="this.buton" width="xxx"
-                        height="xxx" />
-                    <ng-template #elseBlock><img class="title-image" [src]="this.buton"
-                            width="xxx" height="xxx" /></ng-template>
 
-                    <p style="font-size: .55rem;" class="text-input font">{{response.text}}</p>
-                </button>
-            </ion-col>
-        </ion-row>
-    </ion-grid> -->
 
 </ion-content>

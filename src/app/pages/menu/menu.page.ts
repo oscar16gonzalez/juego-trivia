@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { TriviaService } from 'src/app/services/trivia.service';
 
 @Component({
@@ -32,8 +32,15 @@ categoria;
     // });
   }
 
-  season(){
-    this.router.navigate(['/season'])
+  season(idCategoria){
+    console.log("E: ", idCategoria);
+
+    const navigationExtras: NavigationExtras = {
+      queryParams: {
+        data: idCategoria
+      }
+    };
+    this.router.navigate(['/season'], navigationExtras)
   }
 
 }

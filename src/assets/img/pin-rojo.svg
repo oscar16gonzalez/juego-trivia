@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49.973" height="69.73" viewBox="0 0 49.973 69.73">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.516" y1="1.681" x2="0.516" y2="-0.097" gradientUnits="objectBoundingBox">
+      <stop offset="0.39" stop-color="#fff"/>
+      <stop offset="0.837"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_133" data-name="Grupo 133" transform="translate(0)">
+    <path id="Trazado_3829" data-name="Trazado 3829" d="M581.117,165.561c.072,18.771-21.352,44.179-21.352,44.179s-21.619-25.161-21.692-44.013a21.522,21.522,0,0,1,43.044-.166Z" transform="translate(-534.605 -140.01)" fill="#c42a3f"/>
+    <path id="Trazado_3830" data-name="Trazado 3830" d="M559.52,143.049a21.522,21.522,0,0,0-21.439,21.6,28.134,28.134,0,0,0,.257,3.608,36.571,36.571,0,0,0,19.373,5.055c9.841-.038,18.477-3.417,23.412-8.487,0-.114,0-.228,0-.341A21.522,21.522,0,0,0,559.52,143.049Z" transform="translate(-534.613 -138.989)" opacity="0.33" fill="url(#linear-gradient)" style="mix-blend-mode: screen;isolation: isolate"/>
+    <path id="Trazado_3831" data-name="Trazado 3831" d="M759.6,160.27a19.884,19.884,0,0,1,11.116,3.292,18,18,0,0,0-22.207.185A19.651,19.651,0,0,1,759.6,160.27Z" transform="translate(-734.753 -154.942)" fill="#fff" opacity="0.6"/>
+    <circle id="Elipse_26" data-name="Elipse 26" cx="17.668" cy="17.668" r="17.668" transform="translate(0 24.987) rotate(-45)" fill="#fff"/>
+    <path id="Trazado_3832" data-name="Trazado 3832" d="M656.471,231.827a17.436,17.436,0,1,1-17.5-17.369A17.436,17.436,0,0,1,656.471,231.827Z" transform="translate(-614.048 -206.908)" fill="#c42a2a"/>
+    <path id="Trazado_3833" data-name="Trazado 3833" d="M996.965,165.561c.072,18.771-21.352,44.179-21.352,44.179s-.486-57.95-.253-65.618A21.523,21.523,0,0,1,996.965,165.561Z" transform="translate(-950.453 -140.01)" fill="#525252" opacity="0.3" style="mix-blend-mode: overlay;isolation: isolate"/>
+    <path id="Trazado_3835" data-name="Trazado 3835" d="M693.779,271.166a15.415,15.415,0,1,1-15.474-15.355A15.414,15.414,0,0,1,693.779,271.166Z" transform="translate(-653.347 -246.165)" fill="#fff"/>
+    <path id="lock" d="M9.495,0A5.524,5.524,0,0,0,4.443,3.361,10.783,10.783,0,0,0,4.016,7.43H1.569V17.62H17.653V7.43H14.992V5.5a5.335,5.335,0,0,0-.447-2.137A5.639,5.639,0,0,0,9.495,0Zm0,3.244a2.294,2.294,0,0,1,2.272,2.234V7.43H7.241V5.5A2.22,2.22,0,0,1,9.494,3.245Z" transform="translate(15.232 16.177)" fill="#fe1616"/>
+  </g>
+</svg>
